@@ -26,9 +26,9 @@ class Goat:
         }
         self.auth_token = ''
         self.products = []
-        print '='*50
+        print '=================================================='
         print '\n #GOATSUMMER ENTRY JIG \n BY @EDZART/@573SUPREME \n http://github.com/alxgmpr/goatsummer \n'
-        print '='*50
+        print '=================================================='
 
     def login(self, username, password):
         url = 'https://www.goat.com/api/v1/users/sign_in'
@@ -113,10 +113,10 @@ class Goat:
             return False
 g = Goat()
 if g.login(GOATUSER, GOATPASS):
-    print '=' * 50
+    print '=================================================='
     for i in range(0, 16):
         g.get_products(i)
-        print '='*50
+        print '=================================================='
     for p in g.products:
         if not g.share_product(p, 'twitter'):
             exit(-1)
@@ -127,5 +127,5 @@ if g.login(GOATUSER, GOATPASS):
         if not g.share_product(p, 'instagram'):
             exit(-1)
         sleep(randrange(2.7, 4))
-print '='*50
+print '=================================================='
 print 'time to run: {} sec'.format(abs(g.start-time()))
