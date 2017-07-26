@@ -1,6 +1,7 @@
 # coding=utf-8
 
 # GOAT Summer Entry Bot by @edzart/@573supreme
+from random import randrange
 
 import requests
 from time import sleep, time
@@ -117,11 +118,14 @@ if g.login(GOATUSER, GOATPASS):
         g.get_products(i)
         print '='*50
     for p in g.products:
-        g.share_product(p, 'twitter')
-        sleep(1)
-        g.share_product(p, 'facebook')
-        sleep(1)
-        g.share_product(p, 'instagram')
-        sleep(1)
+        if not g.share_product(p, 'twitter'):
+            exit(-1)
+        sleep(randrange(2.3, 4))
+        if not g.share_product(p, 'facebook'):
+            exit(-1)
+        sleep(randrange(2.2, 4))
+        if not g.share_product(p, 'instagram'):
+            exit(-1)
+        sleep(randrange(2.7, 4))
 print '='*50
 print 'time to run: {} sec'.format(abs(g.start-time()))
