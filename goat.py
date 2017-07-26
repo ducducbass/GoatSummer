@@ -56,6 +56,7 @@ class Goat:
                     return False
             else:
                 print 'got bad status code {} from login'.format(r.status_code)
+                print '\n{}\n'.format(r.text)
                 return False
         except requests.exceptions.Timeout:
             print 'timeout from login request'
