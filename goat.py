@@ -120,12 +120,12 @@ if g.login(GOATUSER, GOATPASS):
     for p in g.products:
         if not g.share_product(p, 'twitter'):
             exit(-1)
-        sleep(randrange(2.3, 4))
+        sleep(randrange(3, 5))
         if not g.share_product(p, 'facebook'):
             exit(-1)
-        sleep(randrange(2.2, 4))
+        sleep(randrange(3, 5))
         if not g.share_product(p, 'instagram'):
             exit(-1)
-        sleep(randrange(2.7, 4))
+        sleep(randrange(3, 5))
 print '='*50
 print 'time to run: {} sec'.format(abs(g.start-time()))
