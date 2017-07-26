@@ -7,8 +7,8 @@ import requests
 from time import sleep, time
 
 
-GOATUSER = 'fake@gmail.com'  # GOAT email here
-GOATPASS = 'password123'  # GOAT password here
+GOATUSER = 'alielmi.muh@gmail.com'  # GOAT email here
+GOATPASS = 'asli2014'  # GOAT password here
 
 
 class Goat:
