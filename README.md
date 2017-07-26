@@ -24,4 +24,5 @@ GOATPASS = 'password123'  # GOAT password here
 # Known Issues
 
 * If you get 429 from login its because your temporarily banned
+* 403 is another request error. Nothing you can do except wait ~30 mins and try again
 * Sleeps 1 second in between requests. Not sure if this is enough.
